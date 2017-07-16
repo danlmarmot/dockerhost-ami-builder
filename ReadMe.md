@@ -17,6 +17,13 @@ If you have Packer installed locally, you can use it directly as well.
 If you don't have Docker installed, visit https://www.docker.com/community-edition and install it.
 The current version as of this writing (16 Jul 2017) is Docker 17.06
 
+#### Compile the AWS ECR Credential Helper
+
+The AWS ECR Credential Helper isn't included in this repository.  The ECR Credential Helper is roughly 9MB in size, and it's a compiled binary.
+
+Visit this link for instructions on compiling and building: https://github.com/awslabs/amazon-ecr-credential-helper
+
+Add the binary to the files folder in this repo.
 
 #### Add AWS access keys as environment variables
 
@@ -27,9 +34,7 @@ Set two environment variables in your shell.
     
 #### Chose the base Ubuntu AMI
 
-Choose a valid Ubuntu base AMI.  
-
-Ubuntu releases AWS optimized images frequently; find valid listings here:
+Choose a valid Ubuntu base AMI.   Ubuntu releases AWS optimized images frequently; find valid listings here:
 
 https://cloud-images.ubuntu.com/locator/
 
@@ -85,9 +90,4 @@ On a successful AMI build, the last lines will read:
 
     us-east-2: ami-a55bc27b
 
-## AWS ECR Credential Helper
-
-The AWS ECR Credential Helper isn't included in the files directory--it's roughly 9MB in size, and it's a compiled binary.
-
-Visit this link to compile and build it: https://github.com/awslabs/amazon-ecr-credential-helper
 
