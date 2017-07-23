@@ -6,7 +6,7 @@ RUN apk add --update\
 
 WORKDIR /tmp
 
-RUN curl -so packer.zip https://releases.hashicorp.com/packer/1.0.2/packer_1.0.2_linux_amd64.zip \
+RUN curl -so packer.zip https://releases.hashicorp.com/packer/1.0.3/packer_1.0.3_linux_amd64.zip \
     && unzip packer.zip -d /usr/local/bin/ \
     && rm packer.zip
 
